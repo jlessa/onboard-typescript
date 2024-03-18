@@ -1,0 +1,12 @@
+[
+    {
+        "label": "Dashboard",
+        "path": "/",
+        "icon": "dashboard"
+    },
+    {
+        "label": "Notas",
+        "path": "/notas",
+        "icon": "notes"
+    }
+]
