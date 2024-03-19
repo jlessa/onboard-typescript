@@ -43,7 +43,7 @@ export const MenuLateral: React.FC = ({ children }) => {
                     <Box width="100%" height={theme.spacing(16)} display="flex" alignItems="center" justifyContent={"center"}>
                         <Avatar
                             sx={{ height: theme.spacing(12), width: theme.spacing(12) }}
-                            src="https://media.licdn.com/dms/image/C4E0BAQFP8m6_99qI1w/company-logo_200_200/0/1630634079552?e=2147483647&v=beta&t=UXUSTvCQMvW1jyt4X_N6vjUp_IaZxAM8kYhK1_KYnkU" />
+                            src="https://img.ws.mms.shopee.com.br/441e0dbe5bb79d4bf4bc29c3d0791604" />
                     </Box>
                     <Divider />
                     <Box flex={1}>
