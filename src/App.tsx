@@ -16,17 +16,17 @@ export const App = () => {
   return (
     <AuthProvider>
       <ThemeProvider theme={TemaPadrao}>
-        <Login>
-          <DrawerProvider>
-            <Box width="100vw" height="100vh" bgcolor={TemaPadrao.palette.background.default}>
+        <Box width="100vw" height="100vh" bgcolor={TemaPadrao.palette.background.default}>
+          <Login>
+            <DrawerProvider>
               <BrowserRouter>
                 <SideMenu>
                   <AppRoutes />
                 </SideMenu>
               </BrowserRouter>
-            </Box>
-          </DrawerProvider>
-        </Login>
+            </DrawerProvider>
+          </Login>
+        </Box>
       </ThemeProvider>
     </AuthProvider>
   )
