@@ -7,24 +7,28 @@ import '@fontsource/roboto/700.css';
 import { ThemeProvider } from '@emotion/react';
 import { TemaPadrao } from './shared/themes';
 import { Box } from '@mui/material';
-import { MenuLateral } from './shared/components/menu-lateral/MenuLateral';
-import { DrawerProvider } from './shared/contexts';
+import { SideMenu } from './shared/components/menu-lateral/SideMenu';
+import { AuthProvider, DrawerProvider } from './shared/contexts';
+import { Login } from './shared/components';
 
 export const App = () => {
 
   return (
-    <ThemeProvider theme={TemaPadrao}>
-      <DrawerProvider>
-        <Box width="100vw" height="100vh" bgcolor={TemaPadrao.palette.background.default}>
-          <BrowserRouter>
-            <MenuLateral>
-              <AppRoutes />
-            </MenuLateral>
-          </BrowserRouter>
-        </Box>
-      </DrawerProvider>
-    </ThemeProvider>
-
+    <AuthProvider>
+      <ThemeProvider theme={TemaPadrao}>
+        <Login>
+          <DrawerProvider>
+            <Box width="100vw" height="100vh" bgcolor={TemaPadrao.palette.background.default}>
+              <BrowserRouter>
+                <SideMenu>
+                  <AppRoutes />
+                </SideMenu>
+              </BrowserRouter>
+            </Box>
+          </DrawerProvider>
+        </Login>
+      </ThemeProvider>
+    </AuthProvider>
   )
 }
 

@@ -8,7 +8,11 @@ interface IMenuListItemProps {
     to: string;
     icon: string;
     label: string;
+ 
     onClick: (() => void) | undefined;
+}
+interface ISideMenuProps {
+    children: React.ReactNode;
 }
 
 const MenuListItem: React.FC<IMenuListItemProps> = ({ to, icon, label, onClick }) => {
@@ -32,7 +36,7 @@ const MenuListItem: React.FC<IMenuListItemProps> = ({ to, icon, label, onClick }
     )
 }
 
-export const MenuLateral: React.FC = ({ children }) => {
+export const SideMenu: React.FC<ISideMenuProps> = ({ children }) => {
     const theme = useTheme();
     const smDown = useMediaQuery(theme.breakpoints.down('sm'));
     const { isDrawerOpen, toggleDrawerOpen, drawerOptions } = useDrawerContext();
