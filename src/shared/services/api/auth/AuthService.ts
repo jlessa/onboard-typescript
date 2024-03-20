@@ -14,7 +14,7 @@ const auth = async (username: string, password: string): Promise<IAuth | Error> 
     } catch (error) {
         console.log(error);
         return new Error((error as { message: string }).message || 'Erro ao realizar login');
-    };
+    }
 };
 
 export const AuthService = {
